@@ -93,3 +93,27 @@
 
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'mmenu-light/dist/mmenu-light.css';
+
+// ==========================================
+// تنسيق هوية متجر Stylshan الفاخر والجديد
+// ==========================================
+
+:root {
+    --color-primary: #111111 !important;       // اللون الأسود الملكي للأزرار والنصوص الأساسية
+    --color-primary-dark: #000000 !important;
+    --color-bg: #FAF6F0 !important;            // لون الخلفية البيج الفخم والناعم المطابق للصورة
+    --color-text: #111111 !important;
+    --color-gold: #c5a880 !important;          // لون ذهبي ناعم للتفاصيل والأيقونات الفاخرة
+}
+
+body {
+    background-color: #FAF6F0 !important;
+    color: #111111 !important;
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+// شريط الإعلانات العلوي باللون الأسود الملكي
+.top-bar {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
