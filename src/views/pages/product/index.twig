@@ -83,7 +83,10 @@
 	{% if store.settings.category.testimonial_enabled %}
 		{% component 'home.testimonials' %}
 	{% endif %}
-{% hook 'product.index.after_testimonials' %}
+<div class="s-blocks-wrapper">
+    {% hook 'product.index.after_testimonials' %}
+</div>
+
 {% endblock %}
 
 {% block scripts %}
