@@ -8,6 +8,32 @@
 | component.slides               | object[] | list of slides                                                               |
 | position                       | int      | Sorting number start from zero                                               |
 #}
+{% schema %}
+{
+  "name": "السلايدر المطور",
+  "fields": [
+    {
+      "id": "slider_settings_group",
+      "type": "group",
+      "label": "إعدادات التشغيل والتحكم",
+      "expanded": true,
+      "fields": [
+        {
+          "id": "autoplay",
+          "type": "button",
+          "label": "تشغيل تلقائي",
+             "value": true
+        }
+      ]
+    }
+  ]
+}
+
+
+}
+{% endschema %}
+
+
 <section class="s-block s-block--hero-slider s-block--full-bg wide-placeholder"> 
     <salla-slider 
       id="main-slider-{{ position }}"
