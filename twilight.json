@@ -26,6 +26,33 @@
         "component-random-testimonials"
     ],
     "settings": [
+    {
+      "id": "theme_colors_group",
+      "name": "ألوان الهوية الملكية",
+      "icon": "salla-icon:color-palette",
+      "type": "group",
+      "settings": [
+        {
+          "id": "primary-color",
+          "type": "color",
+          "label": "اللون الأساسي (الأسود الملكي)",
+          "value": "#111111"
+        },
+        {
+          "id": "secondary-color",
+          "type": "color",
+          "label": "اللون الفرعي (الذهبي)",
+          "value": "#D4AF37"
+        },
+        {
+          "id": "background-color",
+          "type": "color",
+          "label": "لون الخلفية (البيج المطفي)",
+          "value": "#F5F2EB"
+        }
+      ]
+    },
+
         {
             "id": "squar_photo_bg_image_size",
             "type": "items",
