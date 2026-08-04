@@ -631,6 +631,9 @@
 
         {% hook 'customer:orders.single.details.end' %}
 
+<salla-order-branch></salla-order-branch>
+<salla-review-factors-tags></salla-review-factors-tags>
+
         {% if order.can_rate or store.settings.rating.allow_update %} 
             <salla-rating-modal></salla-rating-modal>
         {% endif %}
