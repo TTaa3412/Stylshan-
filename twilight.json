@@ -22,8 +22,7 @@
     "component-store-features",
     "component-youtube",
     "menu-images",
-    "filters",
-    "component-random-testimonials"
+    "filters"
   ],
   "settings": [
     {
@@ -35,7 +34,7 @@
         {
           "id": "primary-color",
           "type": "color",
-          "label": "الأَسود الملكي",
+          "label": "الأسود الملكي",
           "value": "#111111"
         },
         {
@@ -43,33 +42,23 @@
           "type": "color",
           "label": "الذهبي الفرعي",
           "value": "#D4AF37"
-        },
-        {
-          "id": "background-color",
-          "type": "color",
-          "label": "البيج المطفي",
-          "value": "#F5F2EB"
         }
       ]
     }
   ],
-  "components": [
-    {
-      "name": "البانر المتحرك المحسن",
-      "slug": "enhanced-slider",
-      "icon": "salla-icon:images",
-      "description": "بانر العرض الرئيسي بتصميم فاخر"
-    },
-    {
-      "name": "المنتجات المميزة",
-      "slug": "featured-products",
-      "icon": "salla-icon:basket",
-      "description": "عرض أحدث منتجات المتجر"
-    }
-  ],
+  "home": {
+    "sections": [
+      "enhanced-slider",
+      "fixed-banner",
+      "featured-products",
+      "products-slider",
+      "store-features",
+      "testimonials"
+    ]
+  },
   "description": {
     "ar": "تصميم متجر فاخر للعطور والمكياج والمنتجات العطرية.",
-    "en": "A wide range of features to support your online store."
+    "en": "A luxury online store theme for cosmetics and perfumes."
   },
   "support_url": "https://stylshan.com"
 }
