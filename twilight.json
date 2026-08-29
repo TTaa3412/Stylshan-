@@ -1,62 +1,81 @@
 {
-    "name": {
-        "ar": "ستايلشن",
-        "en": "⁠Stylshan"
-    },
-    "repository": "https://github.com/TTaa3412/Stylshan-",
-    "author_email": "tfmyw3412@gmail.com",
-    "features": [
-        "mega-menu",
-        "fonts",
-        "color",
-        "breadcrumb",
-        "unite-cards-height",
-        "component-featured-products",
-        "component-fixed-banner",
-        "component-fixed-products",
-        "component-products-slider",
-        "component-photos-slider",
-        "component-parallax-background",
-        "component-testimonials",
-        "component-square-photos",
-        "component-store-features",
-        "component-youtube",
-        "menu-images",
-        "filters",
-        "component-random-testimonials"
-    ],
-    "settings": [
+  "name": {
+    "ar": "ستايليشن",
+    "en": "Stylshan"
+  },
+  "repository": "https://github.com/TTaa3412/Stylshan-",
+  "author_email": "tfmyw34412@gmail.com",
+  "features": [
+    "mega-menu",
+    "fonts",
+    "color",
+    "breadcrumb",
+    "unite-cards-height",
+    "component-featured-products",
+    "component-fixed-banner",
+    "component-fixed-products",
+    "component-products-slider",
+    "component-photos-slider",
+    "component-parallax-background",
+    "component-testimonials",
+    "component-square-photos",
+    "component-store-features",
+    "component-youtube",
+    "menu-images",
+    "filters",
+    "component-random-testimonials"
+  ],
+  "settings": [
+    {
+      "id": "theme_colors_group",
+      "name": "ألوان الهوية الملكية",
+      "icon": "salla-icon:color-palette",
+      "type": "group",
+      "settings": [
         {
-            "id": "theme_colors_group",
-            "name": "ألوان الهوية الملكية",
-            "icon": "salla-icon:color-palette",
-            "type": "group",
-            "settings": [
-                {
-                    "id": "primary-color",
-                    "type": "color",
-                    "label": "الأسود الملكي",
-                    "value": "#111111"
-                },
-                {
-                    "id": "secondary-color",
-                    "type": "color",
-                    "label": "الذهبي الفرعي",
-                    "value": "#D4AF37"
-                },
-                {
-                    "id": "background-color",
-                    "type": "color",
-                    "label": "البيج المطفي",
-                    "value": "#F5F2EB"
-                }
-            ]
+          "id": "primary-color",
+          "type": "color",
+          "label": "الأَسود الملكي",
+          "value": "#111111"
+        },
+        {
+          "id": "secondary-color",
+          "type": "color",
+          "label": "الذهبي الفرعي",
+          "value": "#D4AF37"
+        },
+        {
+          "id": "background-color",
+          "type": "color",
+          "label": "البيج المطفي",
+          "value": "#F5F2EB"
         }
-    ],
-    "components": [],
-    "description": {
-        "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
-        "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "slider",
+      "name": "البانر المتحرك",
+      "icon": "salla-icon:images",
+      "settings": []
     },
-    "support_url": "https://stylshan.com/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%A8%D8%AF%D8%A7%D9%84-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%AC%D8%A7%D8%B9/page-803399450"
+    {
+      "id": "banner",
+      "name": "بانر إعلاني",
+      "icon": "salla-icon:image",
+      "settings": []
+    },
+    {
+      "id": "featured-products",
+      "name": "المنتجات المميزة",
+      "icon": "salla-icon:basket",
+      "settings": []
+    }
+  ],
+  "description": {
+    "ar": "تصميم متجر فاخر للعطور والمكياج والمنتجات العطرية بأسلوب متميز لتجربة تسوق مثيرة لعملائك.",
+    "en": "A wide range of features to support your online store."
+  },
+  "support_url": "https://stylshan.com/%D8%AF%D8%B9%D9%85-%D8%B3%D8%B1%D9%8A%D8%B9"
 }
