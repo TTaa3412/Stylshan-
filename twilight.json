@@ -55,27 +55,21 @@
   ],
   "components": [
     {
-      "id": "slider",
-      "name": "البانر المتحرك",
+      "name": "البانر المتحرك المحسن",
+      "slug": "enhanced-slider",
       "icon": "salla-icon:images",
-      "settings": []
+      "description": "بانر العرض الرئيسي بتصميم فاخر"
     },
     {
-      "id": "banner",
-      "name": "بانر إعلاني",
-      "icon": "salla-icon:image",
-      "settings": []
-    },
-    {
-      "id": "featured-products",
       "name": "المنتجات المميزة",
+      "slug": "featured-products",
       "icon": "salla-icon:basket",
-      "settings": []
+      "description": "عرض أحدث منتجات المتجر"
     }
   ],
   "description": {
-    "ar": "تصميم متجر فاخر للعطور والمكياج والمنتجات العطرية بأسلوب متميز لتجربة تسوق مثيرة لعملائك.",
+    "ar": "تصميم متجر فاخر للعطور والمكياج والمنتجات العطرية.",
     "en": "A wide range of features to support your online store."
   },
-  "support_url": "https://stylshan.com/%D8%AF%D8%B9%D9%85-%D8%B3%D8%B1%D9%8A%D8%B9"
+  "support_url": "https://stylshan.com"
 }
