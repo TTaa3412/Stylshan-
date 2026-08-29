@@ -1,12 +1,13 @@
 {#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
+| Variable        | Type    | Description
+|-----------------|---------|---------------------------------------------------
+| page            | object  |
+| page.title      | string  | *could be html, use |striptags to remove it
+| page.slug       | string  | ex: "cat.show", use it to identify page type
 #}
 {% extends "layouts.master" %}
 {% block content %}
+    {% include 'components.home.enhanced-slider' %}
     {% component home %}
 {% endblock %}
 {% block scripts %}
