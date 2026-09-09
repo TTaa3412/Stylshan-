@@ -1,6 +1,6 @@
 {
   "name": {
-    "ar": "ستايليشن",
+    "ar": "ستايلشن",
     "en": "Stylshan"
   },
   "repository": "https://github.com/TTaa3412/Stylshan-",
@@ -35,13 +35,13 @@
           "id": "primary-color",
           "type": "color",
           "label": "الأسود الملكي",
-          "value": "#111111"
+          "default": "#111111"
         },
         {
           "id": "secondary-color",
           "type": "color",
           "label": "الذهبي الفرعي",
-          "value": "#D4AF37"
+          "default": "#D4AF37"
         }
       ]
     }
@@ -57,8 +57,8 @@
     ]
   },
   "description": {
-    "ar": "تصميم متجر فاخر للعطور والمكياج والمنتجات العطرية.",
-    "en": "A luxury online store theme for cosmetics and perfumes."
+    "ar": "متجر فاخر للعطور والمكياج والمنتجات العطرية",
+    "en": "A luxury online store theme for cosmetics and perfumes"
   },
   "support_url": "https://stylshan.com"
 }
