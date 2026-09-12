@@ -1,58 +1,5 @@
-{# ################## Shared Variables in all views ##################
-| Variable
-|---------------------------------------------------------------------
-| store
-| store.id
-| store.name
-| store.username
-| store.description
-| store.slogan
-| store.logo
-| store.url
-| store.api
-| store.icon
-| store.contacts
-| store.social
-| store.settings
-| store.settings.auth.email_allowed
-| store.settings.auth.mobile_allowed
-| store.settings.auth.is_email_required
-| store.settings.cart.apply_coupon_enabled
-| store.settings.product.total_sold_enabled
-| store.settings.product.fit_type
-| store.settings.category.testimonial_enabled
-| store.settings.tax.number
-| store.settings.tax.certificate
-| store.settings.tax.taxable_prices_enabled
-| store.settings.rating_enabled
-| store.settings.arabic_numbers_enabled
-| store.settings.is_multilingual
-| store.settings.currencies_enabled
-| theme
-| theme.id
-| theme.name
-| theme.mode
-| theme.is_rtl
-| theme.translations_hash
-| theme.color
-| theme.color.primary
-| theme.color.text
-| theme.color.reverse_primary
-| theme.color.reverse_text
-| theme.color.is_dark
-| theme.color.darker(float alpha, ?string hex)
-| theme.color.lighter(float alpha, ?string hex)
-| theme.font
-| theme.font.name
-| theme.font.url
-| theme.settings
-| theme.settings.set(settingName, value)
-| theme.settings.get(settingName, default=null)
-#}
-
 <!DOCTYPE html>
 <html lang="{{ language.code }}" dir="{{ theme.is_rtl ? 'rtl' : 'ltr' }}">
-<!-- بسم الله الرحمن الرحيم -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,14 +12,6 @@
     {% endif %}
 
     {% block head_scripts %}{% endblock %}
-
-    <script data-cfasync="false">
-        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', true)}}" === "1";
-        window.imageZoom = "{{theme.settings.get('product_zoom', true)}}" === "1";
-        window.can_access_wallet = {{user.can_access_wallet ? 'true' : 'false'}};
-        window.enable_more_menu = "{{theme.settings.get('enable_more_menu', true)}}" === "1";
-        window.enable_add_product_toast = "{{theme.settings.get('enable_add_product_toast', true)}}" === "1";
-    </script>
 
     {% hook 'head:start' %}
     {% hook 'head' %}
@@ -95,10 +34,6 @@
     {% hook 'head:end' %}
 </head>
 <body id="app" class="theme-raed overflow-x-hidden">
-<noscript>
-    To get full functionality of this site you need to enable JavaScript.
-    <a href="https://www.enable-javascript.com/" target="_blank">To enable JavaScript on your browser</a>
-</noscript>
 <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
@@ -110,11 +45,7 @@
     {% component 'footer.footer' %}
 </div>
 {% hook 'body:end' %}
-{% if theme.settings.get('enable_add_product_toast') %}
-    <salla-add-product-toast></salla-add-product-toast>
-{% endif %}
 
-{# Twilight Components #}
 <salla-offer-modal></salla-offer-modal>
 <salla-search></salla-search>
 <salla-login-modal></salla-login-modal>
