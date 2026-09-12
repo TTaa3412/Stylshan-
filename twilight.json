@@ -1,6 +1,6 @@
 {
   "name": {
-    "ar": "ستايلشن",
+    "ar": "ستايلشان",
     "en": "Stylshan"
   },
   "repository": "https://github.com/TTaa3412/Stylshan-",
@@ -83,8 +83,8 @@
     }
   ],
   "description": {
-    "ar": "متجر للعطور والمكياج والمنتجات العطرية",
-    "en": "A luxury online store theme for cosmetics"
+    "ar": "متجر لور للعطور والمكياج والمنتجات العطرية",
+    "en": "A luxury online store theme for cosmetics and perfumes"
   },
   "support_url": "https://stylshan.com"
 }
