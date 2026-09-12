@@ -2,43 +2,49 @@
 
 {% block content %}
 <main class="main-container">
+    
     <!-- السلايدر الرئيسي الفاخر -->
-    <section class="enhanced-slider-section my-6">
+    <section class="enhanced-slider-section my-4">
         <div class="container mx-auto px-4">
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden rounded-2xl bg-gray-900 text-white p-8 md:p-12">
                 <div class="relative flex items-center">
                     <div class="relative z-10 max-w-xl">
-                        <span class="text-xs tracking-wider uppercase">اكتشفي جمالك بأسلوب فاخر</span>
-                        <h1 class="text-3xl md:text-4xl font-bold mt-2">مكياج، عطور ومنتجات عناية مختارة بعناية لتناسب ذوقك الراقي</h1>
-                        <p class="text-lg text-gray-600 mt-2">تسوقي الآن واحصلي على أفضل العروض الحصرية.</p>
-                        <a href="/categories" class="btn btn-primary mt-4">تسوق الآن</a>
+                        <span class="text-xs uppercase tracking-wider bg-primary/20 text-primary px-3 py-1 rounded-full">جديد المتجر</span>
+                        <h1 class="text-3xl md:text-5xl font-bold mt-3 mb-4">تشكيلة العطور ومستحضرات التجميل الفاخرة</h1>
+                        <p class="text-lg text-gray-300 mb-6">اكتشف أرقى المنتجات المصممة خصيصاً لتناسب ذوقك الرفيع.</p>
+                        <a href="/categories" class="inline-block bg-primary text-white font-medium px-6 py-3 rounded-xl shadow-lg transition hover:opacity-90">تسوق الان</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- أقسام المنتجات أو المميزات (1، 2، 3 كاملة) -->
+    <!-- قسم المميزات أو المنتجات -->
     <section class="store-features py-8 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
                 <!-- العنصر الأول -->
-                <div class="p-6 bg-white rounded-lg shadow-sm">
-                    <h3 class="font-bold text-lg">منتجات أصلية 100%</h3>
-                    <p class="text-gray-500 text-sm mt-1">نضمن لك جودة وأصالة المنتجات.</p>
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">توصيل سريع وآمن</h3>
+                    <p class="text-gray-500 text-sm">نصلك أينما كنت في كافة مناطق المملكة بكل سرعة.</p>
                 </div>
-                <!-- العنصر الثاني (الذي تم تداركه) -->
-                <div class="p-6 bg-white rounded-lg shadow-sm">
-                    <h3 class="font-bold text-lg">شحن سريع</h3>
-                    <p class="text-gray-500 text-sm mt-1">توصيل لجميع مناطق المملكة.</p>
+                
+                <!-- العنصر الثاني -->
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">منتجات أصلية 100%</h3>
+                    <p class="text-gray-500 text-sm">نضمن لك الجودة العالية من أشهر الماركات العالمية والمحلية.</p>
                 </div>
+                
                 <!-- العنصر الثالث -->
-                <div class="p-6 bg-white rounded-lg shadow-sm">
-                    <h3 class="font-bold text-lg">دعم فني سريع</h3>
-                    <p class="text-gray-500 text-sm mt-1">متواجدين لخدمتك على مدار الساعة.</p>
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">دعم فني متواصل</h3>
+                    <p class="text-gray-500 text-sm">خدمة عملاء جاهزة للإجابة على استفساراتك على مدار الساعة.</p>
                 </div>
+
             </div>
         </div>
     </section>
+
 </main>
 {% endblock %}
