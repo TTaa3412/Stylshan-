@@ -54,37 +54,37 @@
       "products-slider",
       "store-features",
       "testimonials"
-    ],
-    "components": [
-      {
-        "name": "enhanced-slider",
-        "title": "البانر المتحرك"
-      },
-      {
-        "name": "fixed-banner",
-        "title": "بانر ثابت"
-      },
-      {
-        "name": "featured-products",
-        "title": "منتجات مختارة"
-      },
-      {
-        "name": "products-slider",
-        "title": "سلايدر المنتجات"
-      },
-      {
-        "name": "store-features",
-        "title": "مميزات المتجر"
-      },
-      {
-        "name": "testimonials",
-        "title": "آراء العملاء"
-      }
     ]
   },
+  "components": [
+    {
+      "name": "enhanced-slider",
+      "title": "البانر المتحرك"
+    },
+    {
+      "name": "fixed-banner",
+      "title": "بانر ثابت"
+    },
+    {
+      "name": "featured-products",
+      "title": "منتجات مختارة"
+    },
+    {
+      "name": "products-slider",
+      "title": "سلايدر المنتجات"
+    },
+    {
+      "name": "store-features",
+      "title": "مميزات المتجر"
+    },
+    {
+      "name": "testimonials",
+      "title": "آراء العملاء"
+    }
+  ],
   "description": {
-    "ar": "ثيم فاخر للعطور والمكياج والمنتجات العطرية",
-    "en": "A luxury online store theme for cosmetics and perfumes"
+    "ar": "متجر للعطور والمكياج والمنتجات العطرية",
+    "en": "A luxury online store theme for cosmetics"
   },
   "support_url": "https://stylshan.com"
 }
