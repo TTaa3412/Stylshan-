@@ -78,9 +78,7 @@
     {% hook 'head' %}
     {% block styles %}{% endblock %}
     
-    <!-- تم تعديل مسار ملف الـ CSS ليتوافق مع مجلد الـ public المبني -->
-    <link rel="stylesheet" href="{{ asset('public/app.css') }}">
-    
+    <link rel="stylesheet" href="{{ 'app.css' | asset }}">
     <link rel="stylesheet" href="{{ theme.font.url }}">
     <link rel="stylesheet" href="{{ 'fonts/sallaicons.css' | asset }}">
 
