@@ -55,11 +55,36 @@
       "store-features",
       "testimonials"
     ],
-    "components": []
+    "components": [
+      {
+        "name": "enhanced-slider",
+        "title": "البانر المتحرك"
+      },
+      {
+        "name": "fixed-banner",
+        "title": "بانر ثابت"
+      },
+      {
+        "name": "featured-products",
+        "title": "منتجات مختارة"
+      },
+      {
+        "name": "products-slider",
+        "title": "سلايدر المنتجات"
+      },
+      {
+        "name": "store-features",
+        "title": "مميزات المتجر"
+      },
+      {
+        "name": "testimonials",
+        "title": "آراء العملاء"
+      }
+    ]
   },
   "description": {
     "ar": "ثيم فاخر للعطور والمكياج والمنتجات العطرية",
-    "en": "A luxury online store theme for cosmetics"
+    "en": "A luxury online store theme for cosmetics and perfumes"
   },
   "support_url": "https://stylshan.com"
 }
