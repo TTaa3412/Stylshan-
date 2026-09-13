@@ -2,6 +2,11 @@
 
 {% block content %}
 <main class="main-container">
+
+    {# كود تفعيل الأقسام الديناميكية لحل مشكلة لوحة سلة وتجنب الشاشة البيضاء #}
+    {% if salla.blocks %}
+        {{ salla.blocks.render() }}
+    {% endif %}
     
     <!-- السلايدر الرئيسي الفاخر -->
     <section class="enhanced-slider-section my-4">
