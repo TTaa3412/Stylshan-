@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ language.code }}" dir="{{ theme.is_rtl ? 'rtl' : 'ltr' }}">
+<html lang="{{ language.code }}" dir="{{ theme.is_rtl()? 'rtl' : 'ltr' }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ theme.settings.set('placeholder', 'images/placeholder.png') }}
+    {{ theme.settings.set('placeholder', 'images/placeholder.png') | raw }}
 
-    <script defer data-cfasync="false" crossorigin="anonymous" src="{{ 'main-menu.js' | asset }}"></script>
-    {% if theme.settings.get('enable_add_product_toast') %}
-    <script defer src="{{ 'add-product-toast.js' | asset }}"></script>
+    <script defer data-cfasync="false" crossorigin="anonymous" src="{{ 'js/app.js' | cdn }}"></script>
+    {% if theme.settings.get('enable_add_product_toast', true) %}
+    <script defer src="{{ 'add-product-toast.js' | cdn }}"></script>
     {% endif %}
 
     {% block head_scripts %}{% endblock %}
@@ -16,18 +16,18 @@
     {% hook 'head:start' %}
     {% hook 'head' %}
     {% block styles %}{% endblock %}
-    
-    <link rel="stylesheet" href="{{ 'app.css' | asset }}">
-    <link rel="stylesheet" href="{{ theme.font.url }}">
-    <link rel="stylesheet" href="{{ 'fonts/sallaicons.css' | asset }}">
+
+    <link rel="stylesheet" href="{{ 'app.css' | cdn }}">
+    <link rel="stylesheet" href="{{ theme.font.css | cdn }}">
+    <link rel="stylesheet" href="{{ 'fonts/sallaicons.css' | cdn }}">
 
     <style>
         :root {
-            --font-main: '{{ theme.font.name }}', sans-serif;
+            --font-main: '{{ theme.font.name }}';
             --color-primary: {{ theme.color.primary }};
-            --color-primary-dark: {{ theme.color.primary.darker(0.1) }};
-            --color-primary-light: {{ theme.color.primary.lighter(0.1) }};
-            --color-primary-reverse: {{ theme.color.primary.is_dark ? '#fff' : '#000' }};
+            --color-primary-dark: {{ theme.color.primary_dark }};
+            --color-primary-light: {{ theme.color.primary_light }};
+            --color-primary-reverse: {{ theme.color.primary_reverse }};
         }
     </style>
 
@@ -49,9 +49,9 @@
 <salla-offer-modal></salla-offer-modal>
 <salla-search></salla-search>
 <salla-login-modal></salla-login-modal>
-{% if store.scope %}
-    <salla-scopes selection="{{ store.scope.data | json }}"></salla-scopes>
-{% endif %}
-{% block scripts %}{% endblock %}
+
+{# الهوك المطلوب رسمياً من سلة لإضافة المنتج #}
+<salla-add-product></salla-add-product>
+
 </body>
 </html>
