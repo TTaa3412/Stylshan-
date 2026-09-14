@@ -1,90 +1,90 @@
 {
-  "name": {
-    "ar": "ستايلشان",
-    "en": "Stylshan"
-  },
-  "repository": "https://github.com/TTaa3412/Stylshan-",
-  "author_email": "tfmyw34412@gmail.com",
-  "features": [
-    "mega-menu",
-    "fonts",
-    "color",
-    "breadcrumb",
-    "unite-cards-height",
-    "component-featured-products",
-    "component-fixed-banner",
-    "component-fixed-products",
-    "component-products-slider",
-    "component-photos-slider",
-    "component-parallax-background",
-    "component-testimonials",
-    "component-square-photos",
-    "component-store-features",
-    "component-youtube",
-    "menu-images",
-    "filters"
-  ],
-  "settings": [
-    {
-      "id": "theme_colors_group",
-      "name": "ألوان الهوية الملكية",
-      "icon": "salla-icon:color-palette",
-      "type": "group",
-      "settings": [
+    "name": {
+        "ar": "ستايلشن",
+        "en": "⁠Stylshan"
+    },
+    "repository": "https://github.com/TTaa3412/Stylshan-",
+    "author_email": "tfmyw3412@gmail.com",
+    "features": [
+        "mega-menu",
+        "fonts",
+        "color",
+        "breadcrumb",
+        "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner",
+        "component-fixed-products",
+        "component-products-slider",
+        "component-photos-slider",
+        "component-parallax-background",
+        "component-testimonials",
+        "component-square-photos",
+        "component-store-features",
+        "component-youtube",
+        "menu-images",
+        "filters"
+    ],
+    "settings": [
         {
-          "id": "primary-color",
-          "type": "color",
-          "label": "الأسود الملكي",
-          "default": "#111111"
+            "id": "theme_colors_group",
+            "name": "ألوان الهوية الملكية",
+            "icon": "salla-icon:color-palette",
+            "type": "group",
+            "settings": [
+                {
+                    "id": "primary-color",
+                    "type": "color",
+                    "label": "الأسود الملكي",
+                    "default": "#111111"
+                },
+                {
+                    "id": "secondary-color",
+                    "type": "color",
+                    "label": "الذهبي الفرعي",
+                    "default": "#D4AF37"
+                }
+            ]
+        }
+    ],
+    "home": {
+        "sections": [
+            "enhanced-slider",
+            "fixed-banner",
+            "featured-products",
+            "products-slider",
+            "store-features",
+            "testimonials"
+        ]
+    },
+    "components": [
+        {
+            "name": "enhanced-slider",
+            "title": "البانر المتحرك"
         },
         {
-          "id": "secondary-color",
-          "type": "color",
-          "label": "الذهبي الفرعي",
-          "default": "#D4AF37"
+            "name": "fixed-banner",
+            "title": "بانر ثابت"
+        },
+        {
+            "name": "featured-products",
+            "title": "منتجات مختارة"
+        },
+        {
+            "name": "products-slider",
+            "title": "سلايدر المنتجات"
+        },
+        {
+            "name": "store-features",
+            "title": "مميزات المتجر"
+        },
+        {
+            "name": "testimonials",
+            "title": "آراء العملاء"
         }
-      ]
-    }
-  ],
-  "home": {
-    "sections": [
-      "enhanced-slider",
-      "fixed-banner",
-      "featured-products",
-      "products-slider",
-      "store-features",
-      "testimonials"
-    ]
-  },
-  "components": [
-    {
-      "name": "enhanced-slider",
-      "title": "البانر المتحرك"
+    ],
+    "description": {
+        "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
+        "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
     },
-    {
-      "name": "fixed-banner",
-      "title": "بانر ثابت"
-    },
-    {
-      "name": "featured-products",
-      "title": "منتجات مختارة"
-    },
-    {
-      "name": "products-slider",
-      "title": "سلايدر المنتجات"
-    },
-    {
-      "name": "store-features",
-      "title": "مميزات المتجر"
-    },
-    {
-      "name": "testimonials",
-      "title": "آراء العملاء"
-    }
-  ],
-  "description": {
-    "ar": "متجر لور للعطور والمكياج والمنتجات العطرية",
-    "en": "A luxury online store theme for cosmetics and perfumes"
-  },
-  "support_url": "https://stylshan.com"
+    "support_url": "https://stylshan.com/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%A8%D8%AF%D8%A7%D9%84-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%AC%D8%A7%D8%B9/page-803399450"
 }
