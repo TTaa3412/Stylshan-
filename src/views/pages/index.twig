@@ -18,13 +18,13 @@
         </div>
     </div>
 
-    <!-- رأس الصفحة وشعار ستايلشن -->
+    <!-- رأس الصفحة وشعار المتجر -->
     <header class="bg-[#FBF9F5] border-b border-stone-200 py-4">
         <div class="container mx-auto flex justify-between items-center px-4">
             
             <!-- أيقونات المتجر -->
             <div class="flex items-center gap-4">
-                <a href="/cart" class="relative text-stone-800 hover:text-amber-700">
+                <a href="/cart" class="relative text-stone-700 hover:text-stone-900">
                     <span class="sr-only">السلة</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
@@ -35,15 +35,15 @@
             <!-- الشعار -->
             <div class="text-center">
                 <a href="/" class="inline-block">
-                    <h1 class="text-3xl font-bold tracking-wider text-stone-900">STYLSHAN</h1>
-                    <span class="text-[10px] tracking-widest text-stone-600 block">العطور والمكياج الفاخر</span>
+                    <h1 class="text-3xl font-bold tracking-wider text-stone-800">Stylshan</h1>
+                    <span class="text-[10px] tracking-widest text-stone-500 uppercase">مستحضرات تجميل وعطور وشنط</span>
                 </a>
             </div>
 
             <!-- مربع البحث -->
-            <div class="hidden lg:flex items-center w-1/3">
+            <div class="hidden lg:flex items-center w-1/4">
                 <div class="relative w-full">
-                    <input type="text" placeholder="ابحث عن العطور، المكياج، الحقائب..." class="w-full bg-white border border-stone-300 rounded-full py-2 px-4 text-sm focus:outline-none focus:border-amber-700">
+                    <input type="text" placeholder="ابحث عما ترغب به..." class="w-full bg-white border border-stone-300 rounded-full py-2 px-4 text-sm focus:outline-none focus:border-stone-500">
                 </div>
             </div>
 
@@ -51,30 +51,30 @@
 
         <!-- القائمة الأفقية للأقسام -->
         <nav class="hidden md:block mt-4 border-t border-stone-200 pt-3">
-            <ul class="container mx-auto flex justify-center gap-8 text-sm font-medium text-stone-800">
-                <li><a href="/" class="hover:text-amber-700 transition">الرئيسية</a></li>
-                <li><a href="/category/perfumes" class="hover:text-amber-700 transition">العطور</a></li>
-                <li><a href="/category/makeup" class="hover:text-amber-700 transition">المكياج</a></li>
-                <li><a href="/category/bags" class="hover:text-amber-700 transition">الحقائب</a></li>
-                <li><a href="/category/skincare" class="hover:text-amber-700 transition">العناية</a></li>
-                <li><a href="/category/bestsellers" class="hover:text-amber-700 transition">الأكثر مبيعاً</a></li>
-                <li><a href="/category/new" class="hover:text-amber-700 transition">الجديد</a></li>
-                <li><a href="/category/offers" class="hover:text-amber-700 transition">العروض</a></li>
+            <ul class="container mx-auto flex justify-center gap-8 text-sm font-medium text-stone-700">
+                <li><a href="/" class="hover:text-stone-900 transition">الرئيسية</a></li>
+                <li><a href="/category/perfumes" class="hover:text-stone-900 transition">العطور</a></li>
+                <li><a href="/category/makeup" class="hover:text-stone-900 transition">المكياج</a></li>
+                <li><a href="/category/bags" class="hover:text-stone-900 transition">الشنط</a></li>
+                <li><a href="/category/skincare" class="hover:text-stone-900 transition">العناية</a></li>
+                <li><a href="/category/bestsellers" class="hover:text-stone-900 transition">الأكثر مبيعاً</a></li>
+                <li><a href="/category/new" class="hover:text-stone-900 transition">الجديد</a></li>
+                <li><a href="/category/offers" class="hover:text-stone-900 transition text-amber-600">العروض</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- قسم السلايدر الرئيسي الفاخر -->
     <section class="container mx-auto px-4 my-6">
-        <div class="relative rounded-2xl overflow-hidden bg-stone-900 text-white p-8 md:p-16 flex items-center">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
+        <div class="relative rounded-2xl overflow-hidden bg-[#F4EFEA] p-8 md:p-12 shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 
                 <!-- النصوص والأزرار -->
                 <div class="text-right space-y-4">
-                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-wide">أناقة تنطق بالفخامة</h2>
-                    <p class="text-stone-300 text-sm md:text-base">اكتشفي تشكيلة العطور والحقائب الحصرية المصممة لتناسب ذوقك الراقي.</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-stone-800 tracking-tight">أناقتك تبدأ من هنا</h2>
+                    <p class="text-stone-600 text-sm md:text-base">اكتشفي تشكيلة حصرية من أرقى العطور العالمية، مستحضرات التجميل، والشنط الفاخرة.</p>
                     <div>
-                        <a href="/categories" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 rounded-full transition shadow-lg">
+                        <a href="/categories" class="inline-block bg-stone-900 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-stone-800 transition shadow">
                             <span>تسوق الآن</span>
                         </a>
                     </div>
@@ -82,8 +82,8 @@
 
                 <!-- صورة الترويج للفخامة -->
                 <div class="flex justify-center">
-                    <div class="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-stone-800 flex items-center justify-center border border-stone-700">
-                        <span class="text-stone-500 text-sm">Stylshan Luxury Banner</span>
+                    <div class="relative w-full h-64 md:h-80 bg-stone-200 rounded-xl overflow-hidden flex items-center justify-center">
+                        <span class="text-stone-400 text-sm">بانر العروض المميزة</span>
                     </div>
                 </div>
 
