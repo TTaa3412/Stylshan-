@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ language.code }}" dir="{{ theme.is_rtl()? 'rtl' : 'ltr' }}">
+<html lang="{{ language.code }}" dir="{{ theme.is_rtl ? 'rtl' : 'ltr' }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ theme.settings.set('placeholder', 'images/placeholder.png') | raw }}
+    {{ theme.settings.set('placeholder', 'images/placeholder.png') }}
 
-    <script defer data-cfasync="false" crossorigin="anonymous" src="{{ 'js/app.js' | cdn }}"></script>
+    <script defer data-cfasync="false" crossorigin src="{{ 'js/app.js' | asset }}" ></script>
     {% if theme.settings.get('enable_add_product_toast', true) %}
-    <script defer src="{{ 'add-product-toast.js' | cdn }}"></script>
+    <script defer src="{{ 'add-product-toast.js' | asset }}"></script>
     {% endif %}
 
     {% block head_scripts %}{% endblock %}
@@ -17,9 +17,9 @@
     {% hook 'head' %}
     {% block styles %}{% endblock %}
 
-    <link rel="stylesheet" href="{{ 'app.css' | cdn }}">
-    <link rel="stylesheet" href="{{ theme.font.css | cdn }}">
-    <link rel="stylesheet" href="{{ 'fonts/sallaicons.css' | cdn }}">
+    <link rel="stylesheet" href="{{ 'app.css' | asset }}">
+    <link rel="stylesheet" href="{{ 'theme.fonts.css' | asset }}">
+    <link rel="stylesheet" href="{{ 'fonts/sallaicons.css' | asset }}">
 
     <style>
         :root {
@@ -33,7 +33,7 @@
 
     {% hook 'head:end' %}
 </head>
-<body id="app" class="theme-raed overflow-x-hidden">
+<body id="app" class="theme-raed overflow-x-hidden {{ theme.is_rtl ? 'rtl' : 'ltr' }}">
 <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
@@ -49,9 +49,8 @@
 <salla-offer-modal></salla-offer-modal>
 <salla-search></salla-search>
 <salla-login-modal></salla-login-modal>
-
-{# الهوك المطلوب رسمياً من سلة لإضافة المنتج #}
 <salla-add-product></salla-add-product>
+<salla-scopes></salla-scopes>
 
 </body>
 </html>
