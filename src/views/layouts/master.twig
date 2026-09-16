@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ language.code }}" dir="{{ theme.is_rtl ? 'rtl' : 'ltr' }}">
+<html lang="{{ language.code }}" dir="{{ theme.dir }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ theme.settings.set('placeholder', 'images/placeholder.png') }}
 
-    <script defer data-cfasync="false" crossorigin src="{{ 'js/app.js' | asset }}" ></script>
+    <script defer data-cfasync="false" crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/@salla.sa/twilight@latest/dist/js/twilight.js"></script>
     {% if theme.settings.get('enable_add_product_toast', true) %}
     <script defer src="{{ 'add-product-toast.js' | asset }}"></script>
     {% endif %}
@@ -18,22 +18,22 @@
     {% block styles %}{% endblock %}
 
     <link rel="stylesheet" href="{{ 'app.css' | asset }}">
-    <link rel="stylesheet" href="{{ 'theme.fonts.css' | asset }}">
+    <link rel="stylesheet" href="{{ 'theme.font.css' | asset }}">
     <link rel="stylesheet" href="{{ 'fonts/sallaicons.css' | asset }}">
 
     <style>
         :root {
             --font-main: '{{ theme.font.name }}';
-            --color-primary: {{ theme.color.primary }};
-            --color-primary-dark: {{ theme.color.primary_dark }};
-            --color-primary-light: {{ theme.color.primary_light }};
-            --color-primary-reverse: {{ theme.color.primary_reverse }};
+            --color-primary: '{{ theme.color.primary }}';
+            --color-primary-dark: '{{ theme.color.primary_dark }}';
+            --color-primary-light: '{{ theme.color.primary_light }}';
+            --color-primary-reverse: '{{ theme.color.primary_reverse }}';
         }
     </style>
 
     {% hook 'head:end' %}
 </head>
-<body id="app" class="theme-raed overflow-x-hidden {{ theme.is_rtl ? 'rtl' : 'ltr' }}">
+<body id="app" class="theme-raed overflow-x-hidden">
 <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
@@ -42,15 +42,16 @@
     <main id="main-content" role="main">
         {% block content %}{% endblock %}
     </main>
+
     {% component 'footer.footer' %}
 </div>
-{% hook 'body:end' %}
+    {% hook 'body:end' %}
 
 <salla-offer-modal></salla-offer-modal>
 <salla-search></salla-search>
 <salla-login-modal></salla-login-modal>
 <salla-add-product></salla-add-product>
+<salla-add-product-toast></salla-add-product-toast>
 <salla-scopes></salla-scopes>
-
 </body>
 </html>
