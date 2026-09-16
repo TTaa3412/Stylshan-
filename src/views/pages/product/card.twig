@@ -1,23 +1,29 @@
-<div class="product-card bg-white rounded-xl border border-stone-200 overflow-hidden hover:shadow-md transition group">
-    <div class="relative aspect-square bg-stone-100 overflow-hidden">
-        <a href="{{ product.url }}">
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+<div class="product-card bg-white rounded-xl border border-stone-100 shadow-sm overflow-hidden flex flex-col h-full transition hover:shadow-md">
+    <div class="relative aspect-square bg-stone-50 overflow-hidden">
+        <a href="{{ product.url }}" class="block w-full h-full">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300">
         </a>
         {% if product.is_sale %}
-            <span class="absolute top-2 right-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">خصم</span>
+            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+                {{ trans('pages.products.sale') }}
+            </span>
         {% endif %}
     </div>
-    
-    <div class="p-4 text-right">
-        <h3 class="font-bold text-stone-800 text-sm mb-2 truncate">
-            <a href="{{ product.url }}">{{ product.name }}</a>
+
+    <div class="p-4 text-right flex flex-col flex-grow justify-between">
+        <h3 class="font-bold text-stone-800 text-sm mb-2 line-clamp-2">
+            <a href="{{ product.url }}" class="hover:text-primary transition">{{ product.name }}</a>
         </h3>
-        
-        <div class="flex items-center justify-between">
+
+        <div class="flex items-center justify-between mt-auto pt-2 border-t border-stone-50">
             <span class="text-stone-900 font-semibold text-sm">{{ product.price.formatted }}</span>
-            <button type="button" class="bg-stone-900 text-white text-xs px-3 py-2 rounded-lg hover:bg-stone-800 transition" onclick="salla.cart.addItem({{ product.id }})">
-                أضف للسلة
-            </button>
+            <salla-button 
+                type="button" 
+                class="btn--add-to-cart btn bg-stone-900 text-white text-xs px-3 py-2 rounded-lg hover:bg-stone-800 transition"
+                data-id="{{ product.id }}"
+                {{ product.is_out_of_stock ? 'disabled' : '' }}>
+                {{ product.is_out_of_stock ? trans('pages.products.out_of_stock') : 'أضف للسلة' }}
+            </salla-button>
         </div>
     </div>
 </div>
