@@ -24,10 +24,10 @@
     <style>
         :root {
             --font-main: '{{ theme.font.name }}';
-            --color-primary: '{{ theme.color.primary }}';
-            --color-primary-dark: '{{ theme.color.primary_dark }}';
-            --color-primary-light: '{{ theme.color.primary_light }}';
-            --color-primary-reverse: '{{ theme.color.primary_reverse }}';
+            --color-primary: {{ theme.color.primary }};
+            --color-primary-dark: {{ theme.color.primary_dark }};
+            --color-primary-light: {{ theme.color.primary_light }};
+            --color-primary-reverse: {{ theme.color.primary_reverse }};
         }
     </style>
 
@@ -37,7 +37,6 @@
 <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
-    <salla-search></salla-search>
 
     <main id="main-content" role="main">
         {% block content %}{% endblock %}
