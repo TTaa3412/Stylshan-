@@ -13,12 +13,12 @@
 | cart.discount                                     | float               | final discount                                                 |
 | cart.coupon                                       | ?string             |                                                                |
 | cart.total                                        | float               |                                                                |
-| cart.tax_amount                                   | float               | Calculate Tax amount                                                               |
+| cart.tax_amount                                   | float               | Calculate Tax amount                                           |
 | cart.free_shipping_bar                            | ?object             |                                                                |
 | cart.free_shipping_bar.minimum_amount             | float               | how much cart total should be to apply free shipping ex: 1000  |
-| cart.free_shipping_bar.has_free_shipping          | bool                | true when `cart.free_shipping_bar.percent==100`                |
-| cart.free_shipping_bar.percent                    | float               | `0 - 100`                                                      |
-| cart.free_shipping_bar.remaining                  | float               | `830`                                                          |
+| cart.free_shipping_bar.has_free_shipping          | bool                | true when cart.free_shipping_bar.percent==100                |
+| cart.free_shipping_bar.percent                    | float               | 0 - 100                                                        |
+| cart.free_shipping_bar.remaining                  | float               | 830                                                            |
 | cart.items                                        | CartItem[]          |                                                                |
 | cart.options                                      | CartOptions[]       | array of options                                               |
 | cart.items[].id                                   | int                 |                                                                |
@@ -27,7 +27,7 @@
 | cart.items[].quantity                             | int                 |                                                                |
 | cart.items[].type                                 | string              | product type                                                   |
 | cart.items[].product_price                        | MoneyTaxable        |                                                                |
-| cart.items[].price                                | Money\|MoneyTaxable |                                                                |
+| cart.items[].price                                | Money|MoneyTaxable  |                                                                |
 | cart.items[].total                                | Money               |                                                                |
 | cart.items[].product_id                           | int                 |                                                                |
 | cart.items[].notes                                | string              |                                                                |
@@ -37,7 +37,7 @@
 | cart.items[].offer                                | ?object             |                                                                |
 | cart.items[].offer.discount                       | float               |                                                                |
 | cart.items[].offer.is_free                        | bool                |                                                                |
-| cart.items[].offer.names                          | ?string             | ex: `Buy 3 and the 4th on us, National Day`                    |
+| cart.items[].offer.names                          | ?string             | ex: Buy 3 and the 4th on us, National Day                      |
 | cart.items[].donation                             | ?object             |                                                                |
 | cart.items[].attachments                          | ?array              |                                                                |
 | cart.items[].attachments[].id                     | int                 | image id, to be attache with the formData                      |
@@ -88,9 +88,9 @@
                                             
                                         </a>
                                         <div class="space-y-1">
-                                            <h1 class="text-gray-900 leading-6 text-lg">
+                                            <h2 class="text-gray-900 leading-6 text-lg">
                                                 <a href="{{ item.url }}" class="text-base">{{ item.product_name }}</a>
-                                            </h1>
+                                            </h2>
 
                                             <span class="text-sm text-gray-500 line-through item-regular-price {{ item.offer ? '' : 'hidden' }}" >{{ item.product_price|money }}</span>
                                             <span class="inline-flex gap-1 leading-4 text-sm text-gray-500 line-through item-original-price {{ item.is_on_sale ? '' : 'hidden' }}" id="original_price">{{ item.original_price|money }}</span>
@@ -121,8 +121,8 @@
                                             <input type="hidden" value="{{ item.quantity }}" name="quantity" aria-label="Quantity"/>
                                             <span class="w-10 text-center">{{ item.quantity }}</span>
                                         {% else %}
-                                            <salla-quantity-input cart-item-id="{{ item.id }}"  max="{{ item.max_quantity }}"
-                                                class="transtion transition-color duration-300"
+                                            <salla-quantity-input cart-item-id="{{ item.id }}" max="{{ item.max_quantity }}"
+                                                class="transition transition-color duration-300"
 												aria-label="Quantity"
                                                 value="{{ item.quantity }}" name="quantity">
                                             </salla-quantity-input>
@@ -130,7 +130,7 @@
                                         {% set item_total = item.detailed_offers|length > 0 ? item.total_special_price|money : item.total|money%}
                                         <p class="text-primary flex-none font-bold text-sm rtl:md:pl-12 ltr:md:pr-12">
                                             <span>{{ trans('pages.cart.total') }}:</span>
-                                            <span class="inline-block item-total">{{ item.is_available?item_total: trans('pages.cart.out_of_stock') }}</span>
+                                            <span class="inline-block item-total">{{ item.is_available ? item_total : trans('pages.cart.out_of_stock') }}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -174,20 +174,20 @@
 
             <!-- sidebar -->
             {% if cart.items|length %}
-        <div class="sticky top-24 w-full lg:w-96 rtl:lg:mr-8 ltr:lg:ml-8">
-<salla-cart-summary-card></salla-cart-summary-card>
-<div class="shadow-default bg-white p-5 xs:p-7 rounded-md mb-5 relative {{ cart.free_shipping_bar ? '' : 'hidden' }}" id="free-shipping">
+                <div class="sticky top-24 w-full lg:w-96 rtl:lg:mr-8 ltr:lg:ml-8">
+                    <salla-cart-summary-card></salla-cart-summary-card>
+                    <div class="shadow-default bg-white p-5 xs:p-7 rounded-md mb-5 relative {{ cart.free_shipping_bar ? '' : 'hidden' }}" id="free-shipping">
                         <div class="flex rtl:space-x-reverse space-x-3 items-center">
                             <i class="bg-primary text-white rounded-icon sicon-shipping-fast {{ theme.is_rtl ? 'flip-x':'' }}"></i>
-                            {% set is_free=cart.free_shipping_bar.has_free_shipping %}
+                            {% set is_free = cart.free_shipping_bar.has_free_shipping %}
                             <div class="flex-1">
                                 <h4 class="shipping-item font-bold text-sm mb-1.5">{{ trans('pages.cart.free_shipping') }}</h4>
-                                <p class="shipping-item text-sm font- text-gray-500">
-                                        <span id="free-shipping-msg">{{ (is_free
-                                            ?trans('pages.cart.has_free_shipping')
-                                            :trans('pages.cart.free_shipping_alert', {'amount': cart.free_shipping_bar.remaining|money}))
-                                            | raw }}</span>
-                                    <span class="emoji {{ is_free?'':'hidden' }}" id="free-shipping-applied">🎉</span>
+                                <p class="shipping-item text-sm text-gray-500">
+                                    <span id="free-shipping-msg">{{ (is_free
+                                        ? trans('pages.cart.has_free_shipping')
+                                        : trans('pages.cart.free_shipping_alert', {'amount': cart.free_shipping_bar.remaining|money}))
+                                        | raw }}</span>
+                                    <span class="emoji {{ is_free ? '' : 'hidden' }}" id="free-shipping-applied">🎉</span>
                                 </p>
                             </div>
                         </div>
@@ -198,6 +198,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     {% if loyalty %}
                         <salla-loyalty-panel
                             prize-points='{{ loyalty.prize.points }}'
@@ -205,15 +206,15 @@
                         </salla-loyalty-panel>
                     {% endif %}
 
-                    <div id="cart-gifting" class="shadow-default bg-white xs:p-2 rounded-md mb-5 relative  {{gift.enabled ? '' : 'hidden' }}">
-                        <salla-gifting id="salla-gifting" class="mt-5" widget-title="{{ trans("pages.cart.gift_widget_title") }}"  widget-subtitle="{{ gift.text }}" class="mt-5" {{gift.type}}-products  vertical></salla-gifting>
+                    <div id="cart-gifting" class="shadow-default bg-white xs:p-2 rounded-md mb-5 relative {{ gift.enabled ? '' : 'hidden' }}">
+                        <salla-gifting id="salla-gifting" class="mt-5" widget-title="{{ trans("pages.cart.gift_widget_title") }}" widget-subtitle="{{ gift.text }}" {{ gift.type }}-products vertical></salla-gifting>
                     </div>
 
                     <div class="shadow-default bg-white p-5 xs:p-7 rounded-md mb-5 relative transition-height duration-1000">
                         <h2 class="font-bold text-sm mb-5">{{ trans('pages.cart.summary') }}</h2>
 
                         <div class="flex justify-between text-sm mb-5">
-                            <span class="text-gray-500"> {{ trans(cart.tax_amount ? "pages.cart.items_total_without_tax" : "pages.cart.items_total") }} </span>
+                            <span class="text-gray-500">{{ trans(cart.tax_amount ? "pages.cart.items_total_without_tax" : "pages.cart.items_total") }}</span>
                             <b id="sub-total">{{ cart.sub_total|money }}</b>
                         </div>
 
@@ -238,7 +239,7 @@
 
                         <!-- coupon discount -->
                         <div id="total-discount" class="flex justify-between text-sm {{ cart.total_discount ? '' : 'hidden' }}">
-                            <span class="text-gray-500 block  h-10">{{ trans('pages.cart.discount') }}</span>
+                            <span class="text-gray-500 block h-10">{{ trans('pages.cart.discount') }}</span>
                             <b>- {{ cart.total_discount|money }}</b>
                         </div>
 
@@ -264,7 +265,7 @@
                         {% hook 'cart:summary.end' %}
                     </div>
 
-                     <!-- Tiered Offer Component -->
+                    <!-- Tiered Offer Component -->
                     <salla-tiered-offer></salla-tiered-offer>
                 </div>
             {% endif %}
